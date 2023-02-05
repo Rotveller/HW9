@@ -1,7 +1,11 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
+        task4();
     }
 
     public static int[] generateRandomArray() {
@@ -16,6 +20,7 @@ public class Main {
     public static void task1() {
         System.out.println("Task1");
         int[] arr = generateRandomArray();
+        System.out.println(Arrays.toString(arr));
         int sum = 0;
         for (int i : arr) {
             sum = sum + i;
@@ -28,17 +33,41 @@ public class Main {
     public static void task2() {
         System.out.println("Task2");
         int[] arr = generateRandomArray();
-        int maxNumber = -1;
-        int minNumber = 1;
+        int maxNumber = arr[0];
+        int minNumber = arr[0];
+        System.out.println(Arrays.toString(arr));
         for (int j : arr) {
             if (j > maxNumber) {
                 maxNumber = j;
             }
         }
-        System.out.println(maxNumber);
-        for (int t = 0; t >= arr.length; t++) {
+        System.out.println("Максимальное значение = " + maxNumber);
 
+        for (int t : arr) {
+            if (t < minNumber) {
+                minNumber = t;
+            }
         }
-        System.out.println(minNumber);
+        System.out.println("Минимальное значение = " + minNumber);
+    }
+
+    public static void task3() {
+        System.out.println("Task3");
+        int[] arr = generateRandomArray();
+        int sum = 0;
+        System.out.println(Arrays.toString(arr));
+        for (int i : arr) {
+            sum = sum + i;
+        }
+        System.out.println("Среднее значение = " + (double) sum / arr.length + " рублей");
+    }
+
+    public static void task4() {
+        System.out.println("Task4");
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
+        }
     }
 }
+
