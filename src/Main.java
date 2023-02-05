@@ -28,12 +28,17 @@ public class Main {
     public static void task2() {
         System.out.println("Task2");
         int[] arr = generateRandomArray();
-        int maxNumbers = -1;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > maxNumbers) {
-                maxNumbers = arr[i];
+        int maxNumber = -1;
+        int minNumber = 1;
+        for (int j : arr) {
+            if (j > maxNumber) {
+                maxNumber = j;
             }
         }
-        System.out.println(maxNumbers);
+        System.out.println(maxNumber);
+        for (int t = 0; t >= arr.length; t++) {
+
+        }
+        System.out.println(minNumber);
     }
 }
