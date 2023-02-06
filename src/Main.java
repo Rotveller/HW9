@@ -42,12 +42,6 @@ public class Main {
             }
         }
         System.out.println("Максимальное значение = " + maxNumber);
-
-        for (int t : arr) {
-            if (t < minNumber) {
-                minNumber = t;
-            }
-        }
         System.out.println("Минимальное значение = " + minNumber);
     }
 
